@@ -19,8 +19,8 @@
    - Emit this user list to the connected clients via a custom WebSocket event, for example, `socket.emit('active-users', userList)`.
    - On the client side, handle this event to display the list of active users in the UI.
 
-## Ensuring scalability and performance**:
-   - Load Balancing and Horizontal Scaling**: Use a load balancer like NGINX to distribute WebSocket connections across multiple servers.
+## Ensuring scalability and performance:
+   - **Load Balancing and Horizontal Scaling**: Use a load balancer like NGINX to distribute WebSocket connections across multiple servers.
    - **Socket.IO Scaling**: Use Redis or another pub/sub system to manage state and broadcast messages across different instances of the app when scaling horizontally.
    - **Throttling Canvas Updates**: To reduce network load, throttle the frequency of canvas updates (like the timeout in your code) and only send significant changes.
    - **Data Compression**: Compress the canvas data before sending it across the WebSocket to minimize bandwidth usage.
